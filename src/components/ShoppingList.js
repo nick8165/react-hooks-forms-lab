@@ -7,8 +7,7 @@ import Item from "./Item";
 function ShoppingList({ items }) {
   const [array, setArray] = useState([...items])
   const [itemAdd, setItemAdd] = useState("")
-  const [newName, setNewName] = useState("")
-  const [newCategory, setNewCategory] = useState("Produce")
+  
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [search, setSearch] = useState("");
   
@@ -20,13 +19,7 @@ function ShoppingList({ items }) {
     setSearch(event.target.value)
   }
 
-  function handleNewName(event) {
-    setNewName(event.target.value)
-  }
-
-  function handleNewCategory(event) {
-    setNewCategory(event.target.value)
-  }
+  
 
   function onItemFormSubmit(newItem) {
     setArray([...items, newItem])
@@ -50,5 +43,6 @@ function ShoppingList({ items }) {
     </div>
   );
 }
+
 
 export default ShoppingList
